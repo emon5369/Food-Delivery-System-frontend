@@ -1,0 +1,75 @@
+.food-menu {
+  background-color: #ececec;
+  padding: 4% 0 2% 0;
+}
+
+.food-menu-box {
+  width: 43%;
+  height: 150px;
+  margin: 1%;
+  padding: 2%;
+  float: left;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.food-menu-box:hover {
+  transform: scale(1.05); 
+}
+
+.food-menu-img {
+  width: 30%; 
+  float: left;
+}
+
+.food-menu-desc {
+  width: 60%; 
+  float: left;
+  margin-left: 8%;
+}
+
+.food-price {
+  font-size: 1.2rem;
+  margin: 2% 0;
+}
+
+.food-detail {
+  font-size: 1rem;
+  color: #747d8c;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.cart-notification {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #4caf50;
+  color: white;
+  padding: 6.5px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.cart-notification.show {
+  opacity: 1;
+}

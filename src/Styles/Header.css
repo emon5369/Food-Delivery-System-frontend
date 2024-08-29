@@ -1,0 +1,92 @@
+.navbar {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: #fff;
+  padding: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.navbar .logo img {
+  max-height: 50px;
+}
+
+.navbar .menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar .menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .menu ul li {
+  display: inline-block;
+}
+
+.act{
+    color:#088178;
+    border-bottom: 2px solid #088178;
+    transform: scale(1.05);
+}
+
+.navbar .actions {
+  display: flex;
+  gap: 20px;
+}
+
+
+.navbar .cart{
+  position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:end;
+  }
+  .navbar .cart .dot{
+    position:absolute;
+    min-height: 8px;
+    min-width: 8px;
+    background-color: blue;
+    border-radius: 4px;
+    top: 1px;
+    right: -6px;
+  }
+  
+  .navbar .sign-in {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+  }
+
+.navbar .sign-in {
+    background: transparent;
+    border: 1px solid #ff6b81;
+    border-radius: 50px;
+    padding: 10px 25px;
+    color: #ff6b81;
+    transition: 0.3s;
+}
+
+.navbar .sign-in:hover{
+    background: #088178;
+    color: white;
+}
+
+.navbar .clearfix {
+  clear: both;
+}

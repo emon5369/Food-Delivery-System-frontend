@@ -1,0 +1,109 @@
+.cart-container .container{
+    display: flex;
+    justify-content: center;
+}
+
+.cart-container h1 {
+    padding-top: 70px;
+    color: green;
+}
+
+.cart-item {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    position: relative;
+    min-width: 450px;
+}
+
+.cart-item-img img {
+    max-width: 150px;
+    border-radius: 8px;
+}
+
+.cart-item-desc {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.cart-item-desc h4 {
+    margin-bottom: 10px;
+}
+
+.cart-item-desc .food-price {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.cart-item-desc .food-detail {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.cart-item-desc .quantity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-desc .quantity input {
+    width: 80px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.cart-item-remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.cart-item-remove button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cart-item-remove button:hover {
+    background-color: rgb(232, 32, 32);
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.confirm-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1dbd3b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-btn:hover {
+    background-color: #00831a;
+}
+
+.empty{
+    font-size:x-large;
+    font-weight: bold;
+    color: red;
+}

@@ -1,0 +1,36 @@
+.categories {
+  padding: 4% 0 1% 0;
+}
+
+.category-box {
+  position: relative;
+  overflow: hidden;
+  width: 28%;
+  float: left;
+  margin: 2%;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.category-box:hover {
+  transform: scale(1.07); 
+}
+
+.category-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; 
+}
+
+.float-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.6); 
+  padding: 10px;
+  border-radius: 5px;
+}
