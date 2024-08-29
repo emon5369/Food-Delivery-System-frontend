@@ -4,12 +4,24 @@ import '../Styles/SignIn.css';
 const PopupSignIn = ({ isOpen, onClose, onSignIn }) => {
     const [isSignUp, setIsSignUp] = useState(false);
 
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [name, setName] = useState('');
+    const [contact, setContact] = useState('');
+    const [address, setAddress] = useState('');
+
     const handleToggle = () => setIsSignUp(!isSignUp);
+
+    const resetForm = () => {
+        setEmail('');
+        setPassword('');
+        setName('');
+        setContact('');
+        setAddress('');
+    };
 
     const handleSignInSubmit = async (event) => {
         event.preventDefault();
-        const email = event.target.email.value;
-        const password = event.target.password.value;
 
         const response = await fetch('http://localhost/reactphp/signin.php', {
             method: 'POST',
@@ -32,6 +44,7 @@ const PopupSignIn = ({ isOpen, onClose, onSignIn }) => {
                 alert('Sign-in successful!');
                 localStorage.setItem('userToken', data.user.id);
                 onSignIn(profileData.user);
+                resetForm(); // Reset the input fields after successful sign-in
             } else {
                 alert('Failed to fetch profile info.');
             }
@@ -42,11 +55,6 @@ const PopupSignIn = ({ isOpen, onClose, onSignIn }) => {
 
     const handleSignUpSubmit = async (event) => {
         event.preventDefault();
-        const name = event.target.name.value;
-        const contact = event.target.contact.value;
-        const email = event.target.email.value;
-        const address = event.target.address.value;
-        const password = event.target.password.value;
 
         const response = await fetch('http://localhost/reactphp/signup.php', {
             method: 'POST',
@@ -56,8 +64,16 @@ const PopupSignIn = ({ isOpen, onClose, onSignIn }) => {
 
         const data = await response.json();
         if (data.status === 'success') {
-            alert('Sign-up successful! Please sign in.');
-            setIsSignUp(false);
+            alert('Sign-up successful! Signing in...');
+        
+            await handleSignInSubmit({
+                target: {
+                    email: { value: email },
+                    password: { value: password }
+                },
+                preventDefault: () => {}
+            });
+            resetForm(); // Reset the input fields after successful sign-up and sign-in
         } else {
             alert(data.message);
         }
@@ -71,11 +87,11 @@ const PopupSignIn = ({ isOpen, onClose, onSignIn }) => {
                     <div className="form-container">
                         <h2>Sign Up</h2>
                         <form onSubmit={handleSignUpSubmit}>
-                            <input type="text" name="name" placeholder="Name" required />
-                            <input type="text" name="contact" placeholder="Contact" required />
-                            <input type="email" name="email" placeholder="Email" required />
-                            <input type="text" name="address" placeholder="Address" required />
-                            <input type="password" name="password" placeholder="Password" required />
+                            <input type="text" name="name" placeholder="Name" value={name} onChange={e => setName(e.target.value)} required />
+                            <input type="text" name="contact" placeholder="Contact" value={contact} onChange={e => setContact(e.target.value)} required />
+                            <input type="email" name="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} required />
+                            <input type="text" name="address" placeholder="Address" value={address} onChange={e => setAddress(e.target.value)} required />
+                            <input type="password" name="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} required />
                             <button type="submit">Sign Up</button>
                         </form>
                         <p>Already have an account? <a href="#" onClick={handleToggle}>Sign In</a></p>
@@ -84,8 +100,8 @@ const PopupSignIn = ({ isOpen, onClose, onSignIn }) => {
                     <div className="form-container">
                         <h2>Sign In</h2>
                         <form onSubmit={handleSignInSubmit}>
-                            <input type="email" name="email" placeholder="Email" required />
-                            <input type="password" name="password" placeholder="Password" required />
+                            <input type="email" name="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} required />
+                            <input type="password" name="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} required />
                             <button type="submit">Sign In</button>
                         </form>
                         <p>{"Don't"} have an account? <a href="#" onClick={handleToggle}>Sign Up</a></p>
