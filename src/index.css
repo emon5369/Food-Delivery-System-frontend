@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=RocknRoll+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=RocknRoll+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +23,7 @@ h3 {
   font-size: 1.5rem;
   color: #ff4757;
 }
-h6{
+h6 {
   padding-top: 100px;
   font-size: xx-large;
   color: #f24c65;
@@ -81,31 +81,37 @@ fieldset {
   border-radius: 5px;
 }
 
-
 /* Hero section */
 
 .hero-container {
-  background-image: url(src/images/bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left;
-  padding: 15% 0;
+  position: relative;
+  width: 100%;
+  height: min-content;
+  overflow: hidden;
 }
-.hero{
+
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin-top: 15px;
   font-size: larger;
 }
-.hero h5{
+.hero h1, .hero h5 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.hero h5 {
   color: #f0f9d1;
   font-size: large;
 }
-.hero span{
+.hero span {
   color: #f24c65;
 }
 .hero-btn {
   display: inline-block;
   border-radius: 4px;
-  background-color: #ff6b81; 
+  background-color: #ff6b81;
   border: none;
   text-align: center;
   font-size: 28px;
@@ -115,12 +121,12 @@ fieldset {
   transition: all 0.5s;
   cursor: pointer;
 }
-.hero-btn:hover{
+.hero-btn:hover {
   background-color: #ff4757;
 }
 
 .hero-btn span {
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -128,7 +134,7 @@ fieldset {
 }
 
 .hero-btn span:after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 0;
@@ -145,21 +151,20 @@ fieldset {
   right: 0;
 }
 
-.delivery{
+.delivery {
   height: 130px;
 }
 
 /* below hero */
 
-.home-categories{
+.home-categories {
   padding-bottom: 15px;
 }
 
-.home-menu{
+.home-menu {
   background-color: #ececec;
   padding-bottom: 15px;
 }
-
 
 /* Popup message */
 
@@ -178,8 +183,8 @@ fieldset {
 
 .msg-content {
   color: #2f3542;
-  font-size:xx-large;
-  
+  font-size: xx-large;
+
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;

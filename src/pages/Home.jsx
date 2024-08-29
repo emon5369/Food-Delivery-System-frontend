@@ -6,11 +6,12 @@ function Home() {
     return (
         <>
             <div className="hero-container text-center">
+                <img src="images/bg.jpg" alt="hero-img" />
                 <div className="container">
                     <div className="hero">
                         <h5>Easy order & fast delivery</h5>
                         <h1> <span>Enjoy</span> your favorite food!</h1>
-                        <img className="delivery" src="src\images\service-01.png" alt="" />
+                        <img className="delivery" src="images/service-01.png" alt="delivery" />
                         <br />
                         <button className="hero-btn">
                             <Link to='/categories'><span>Menu</span></Link>

@@ -34,7 +34,7 @@ const Categories = ({limit}) => {
                     categories.map(category => (
                         <CategoryCard
                             key={category.id}
-                            image={`src/images/category/${category.image_name}`}
+                            image={`images/category/${category.image_name}`}
                             title={category.title}
                             link={`/categories/:${category.id}`}
                         />

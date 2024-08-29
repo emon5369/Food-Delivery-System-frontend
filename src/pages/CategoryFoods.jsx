@@ -27,7 +27,7 @@ const CategoryFoods = () => {
             });
     }, [categoryId]);
 
-    const cleanedCategoryId = categoryId.replace(/[^0-9]/g, '');
+    const cleanedCategoryId = categoryId.replace(/[^0-9]/g, ''); //remove the colon
 
     const filteredFoods = foods.filter(food => food.category_id === cleanedCategoryId);
 
@@ -42,7 +42,9 @@ const CategoryFoods = () => {
                     filteredFoods.map(food => (
                         <FoodCard
                             key={food.id}
-                            image={`../src/images/food/${food.image_name}`}
+                            image={`../images/food/${food.image_name}`} 
+                            //used .. before /images for nested route
+                            //alternate: absolute path `/images/food/${food.image_name}`
                             title={food.title}
                             price={food.price}
                             description={food.description}

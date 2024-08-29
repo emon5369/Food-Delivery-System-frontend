@@ -6,12 +6,11 @@ function Footer() {
             <div className="foot-container">
 
                 <div className="col">
-                    <img className="foot-logo" src=".\src\images\logo.png" alt="brand" />
+                    <img className="foot-logo" src="images/logo.png" alt="brand" />
                     <h4>Contact Us</h4>
                     <p><strong>Address:</strong> Dhanmondi, Dhaka-1205</p>
                     <p><strong>Phone:</strong> +880 1234567890</p>
                     <p><strong>Hours:</strong> 08:00am - 02:00am, Sun-Fri</p>
-
                 </div>
                 <div className="col">
                     <h4>About</h4>
@@ -44,8 +43,8 @@ function Footer() {
                         <h4>Install App</h4>
                         <p>From App Store or Google Play</p>
                         <div className="row">
-                            <img src=".\src\images\pay\app.jpg" alt="app store" />
-                            <img src=".\src\images\pay\play.jpg" alt="play store" />
+                            <img src="images\pay\app.jpg" alt="app store" />
+                            <img src="images\pay\play.jpg" alt="play store" />
                         </div>
                     </div>
                 </div>

@@ -59,7 +59,7 @@ function Header() {
             <div className="container">
                 <div className="logo">
                     <Link to="/" title="Logo">
-                        <img src="/src/images/logo.png" alt="Restaurant Logo" className="img-responsive" />
+                        <img src="images/logo.png" alt="Restaurant Logo" className="img-responsive" />
                     </Link>
                 </div>
 

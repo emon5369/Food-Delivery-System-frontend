@@ -52,7 +52,7 @@ const ContactUs = () => {
 
             <div className="text-center">
                 <h6 >Contact Us</h6>
-                <img src="src\images\service-03.png" alt="food" />
+                <img src="images\service-03.png" alt="food" />
             </div>
             <form onSubmit={handleSubmit} className="contact-form">
                 <div className="form-group">
