@@ -44,7 +44,7 @@ const PopupSignIn = ({ isOpen, onClose, onSignIn }) => {
                 alert('Sign-in successful!');
                 localStorage.setItem('userToken', data.user.id);
                 onSignIn(profileData.user);
-                resetForm(); // Reset the input fields after successful sign-in
+                resetForm();
             } else {
                 alert('Failed to fetch profile info.');
             }
@@ -73,7 +73,7 @@ const PopupSignIn = ({ isOpen, onClose, onSignIn }) => {
                 },
                 preventDefault: () => {}
             });
-            resetForm(); // Reset the input fields after successful sign-up and sign-in
+            resetForm();
         } else {
             alert(data.message);
         }

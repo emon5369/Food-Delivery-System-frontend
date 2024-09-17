@@ -6,7 +6,7 @@ export const AuthProvider = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     useEffect(() => {
-        // Check if user is already logged in when the app loads
+        // Check if user is already logged in when the web loads
         const token = localStorage.getItem('userToken');
         if (token) {
             setIsAuthenticated(true);
