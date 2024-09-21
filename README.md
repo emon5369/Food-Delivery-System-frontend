@@ -7,8 +7,8 @@ A web-based application designed to simplify the process of ordering food online
 - **User Authentication:** Users can sign up, log in, and manage their account details.
 - **Browse Categories & Foods:** Customers can explore food items categorized into different sections.
 - **Order Placement:** Customers can place orders, view order details, and track their order status.
+- **Coatact Form:** A simple message/feedback form for sharing users feedbak.
 - **Admin Panel:** Admins can manage food categories, food items, orders, and delivery personnel.
-- **Real-Time Messaging:** A simple message system for communication between customers and admin.
 
 ## 🛠 Technologies Used
 
@@ -70,7 +70,7 @@ Before running this project, ensure you have the following:
 
 The backend of this project, created with **PHP**, is available in a separate repository:
 
-- [Frontend Repository](https://github.com/emon5369/Food-Delivery-System-backend) 
+- [Backend Repository](https://github.com/emon5369/Food-Delivery-System-backend) 
 
 ## 📝 Future Improvements
 
