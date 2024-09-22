@@ -88,7 +88,7 @@ const ContactUs = () => {
                         required
                     />
                 </div>
-                <button type="submit" className="btn btn-primary">Send Message</button>
+                <button type="submit" className="btn">Send Message</button>
             </form>
             {isPopupMessageOpen && (
                 <div className="popup-msg">
